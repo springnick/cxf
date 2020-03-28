@@ -1,0 +1,11 @@
+1. mvn clean install -Dmaven.test.skip=true
+2. run server : java -jar xx.jar
+
+run client with :
+-Dssl.debug=true -Djavax.net.debug=ssl
+
+终于找到了这么一个帖子：Java加密套件强度限制引起的SSL handshake_failure 我对比了下，情况几乎一样，我把作者查找问题的方法都试了一遍(验证方法可以参考上面的帖子，不再赘余)，也都一致，最终我们尝试了作者给出的方法 ：
+
+升级jdk到 1.8.0_151和以后的版本，无需下载任何文件，只要修改Java\jre\lib\security\java.security文件
+
+crypto.policy=unlimited
