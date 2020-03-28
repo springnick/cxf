@@ -9,3 +9,12 @@ run client with :
 升级jdk到 1.8.0_151和以后的版本，无需下载任何文件，只要修改Java\jre\lib\security\java.security文件
 
 crypto.policy=unlimited
+
+
+UAT :
+openjdk 1.8.0_222-b10
+
+/usr/lib/jvm/java-.18xxxx/jre/lib/security  java.security   crypto.policy=unlimited
+
+Test:
+sun jdk 1.8.0_201  user/local/gimcde_tst/jdk1.8.0_201/jre/lib/security  java.security #crypto.policy=unlimited
